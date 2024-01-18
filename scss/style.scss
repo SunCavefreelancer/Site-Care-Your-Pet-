@@ -519,6 +519,7 @@
 	&__item { // slider 1, 2 ,3...
 		padding: toRem(20);
 		border: toRem(1) double #0ddcf8;
+		background-color: #f1f1f1;
 		& > *:last-child {
 			margin-bottom: toEm(0);
 		}

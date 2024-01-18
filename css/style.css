@@ -667,6 +667,7 @@ span {
 .slider__item {
   padding: 1.25rem;
   border: 0.0625rem double #0ddcf8;
+  background-color: #f1f1f1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
