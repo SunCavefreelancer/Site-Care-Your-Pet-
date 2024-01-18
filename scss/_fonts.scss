@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500&display=swap");
+
+
+/* ======Підключення вручну======= */
+/* Шрифт № 1 */
+@font-face {
+	font-family: 'CoreSansC-55Medium';
+	src:
+		url("..//fonts/CoreSansC-55Medium.woff2") format("woff2"),
+		url("..//fonts/CoreSansC-55Medium.woff") format("woff");
+	wont-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+@font-face {
+	font-family: 'CoreSansC-75ExtraBold';
+	src:
+		url("..//fonts/CoreSansC-75ExtraBold.woff2") format("woff2"),
+		url("..//fonts/CoreSansC-75ExtraBold.woff") format("woff");
+	wont-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
