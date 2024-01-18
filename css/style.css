@@ -149,7 +149,7 @@ span {
 }
 
 .hero {
-  background: url(../img2/21.webp), url(../img2/22.webp), url(../img/hero.jpg);
+  background: url(../img2/21.webp), url(../img2/22.webp), url(../img2/hero.webp);
   background-repeat: no-repeat;
   background-position: top right, top left, 0 0;
   background-size: 8.75rem, 12.5rem, cover;
