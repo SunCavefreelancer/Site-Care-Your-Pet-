@@ -331,44 +331,35 @@ span {
   background: linear-gradient(45deg, rgba(255, 197, 8, 0.5), rgba(251, 255, 24, 0.9)), url(../img2/лапы.webp) no-repeat, url(../img2/klipartz01.png) center right no-repeat;
   background-size: auto auto, contain;
   height: 100svh;
-  padding: 9.375rem 0rem 4.375rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-@media (max-width: 62em) {
-  .hero {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-@media (max-width: 47.9375em) {
-  .hero {
-    text-align: center;
-    padding: 9.375rem 0rem;
-  }
-}
-@media (max-width: 40em) {
-  .hero {
-    padding: 9.375rem 0rem 3.4375rem;
-  }
-}
-@media (max-width: 37.8125em) {
-  .hero {
-    padding: 15.625rem 0rem 2.5rem;
-  }
-}
-@media (max-width: 37.8125em) {
-  .hero {
-    padding: 0rem 0rem 0rem;
-  }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 9.375rem 0rem 4.375rem;
+  /* 		@media(max-width: toEm(992)) {
+  			display: flex;
+  			justify-content: center;
+  			align-items: center;
+  		}
+  		@media(max-width: toEm(767)) {
+  			text-align: center;
+  			padding: toRem(150) toRem(0);
+  		}
+  		@media(max-width: toEm(640)) {
+  			padding: toRem(150) toRem(0) toRem(55);
+  		}
+  		@media(max-width: toEm(605)) {
+  			padding: toRem(250) toRem(0) toRem(40);
+  		}
+  		@media(max-width: toEm(605)) {
+  			padding: toRem(0) toRem(0) toRem(0);
+  		} */
+  display: flex;
 }
 .hero__item {
   display: grid;

@@ -58,10 +58,13 @@
 		background-size: auto auto, contain;
 
 		height: 100svh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
 		padding: toRem(150) toRem(0) toRem(70);
 
-		@media(max-width: toEm(992)) {
+/* 		@media(max-width: toEm(992)) {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -78,7 +81,7 @@
 		}
 		@media(max-width: toEm(605)) {
 			padding: toRem(0) toRem(0) toRem(0);
-		}
+		} */
 
 		
 		display: flex;
