@@ -12,17 +12,82 @@
 <body>
 
 	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+
+				<div class="header__logo">Doctor Dodo</div> <!-- logo -->
+
+				<div class="menu"> <!-- menu -->
+					<div class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item menu__item--vip">
+								<a href="#" class="menu__link">Home</a>
+							</li>
+							<li class="menu__item">
+								<!-- menu__item-parent модифікатор для стрілки вниз -->
+								<a href="#" class="menu__link">About</a>
+							</li>
+							<li class="menu__item">
+								<!-- menu__item-parent модифікатор для стрілки вниз -->
+								<a href="#" class="menu__link">Services</a>
+							</li>
+							<li class="menu__item">
+								<!-- menu__item-parent модифікатор для стрілки вниз -->
+								<a href="#" class="menu__link">Gallery</a>
+							</li>
+							<li class="menu__item">
+								<!-- menu__item-parent модифікатор для стрілки вниз -->
+								<a href="#" class="menu__link">Reviews</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Aplication</a>
+							</li>
+							<li class="menu__item menu__item--parent">
+								<!-- menu__item-parent модифікатор для стрілки вниз -->
+								<a href="#" class="menu__link">Contact</a>
+								<div class="sub-menu"> <!-- вкладаємо 2 блок меню -->
+									<ul class="sub-menu__list">
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link"> +51 (0487) 520-65-87,</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">+51 (0487) 329-78-91,</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">+51 (0487) 531-69-42</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Schedule:<br>08:00 –20:00</a>
+										</li>
+									</ul>
+								</div> <!-- вкладаємо 2 блок меню -->
+							</li>
+						</ul>
+					</div>
+				</div> <!-- menu -->
+
+				<div class="header__button button__header"> <!-- button right -->
+					<a href="#" class="button__header__item">Log In</a>
+				</div>
+
+				<button class="icon-menu"> <!-- это будет бургер меню ГОРИЗОНТАЛЬНЫЕ ПОЛОСКИ  -->
+					<span></span> <!-- здесь будем рисовать СРЕДНЮЮ ПОЛОСКУ МЕНЮ  -->
+				</button>
+
+			</div> <!-- header__container -->
+		</header>
+
+
 
 		<main class="main">
 			<section class="hero">
 				<div class="hero__container">
 
-
 					<div class="hero__item">
 						<div class="hero__text">
 							<h1>Professional <span>Care Your Pet</span></h1>
 							<div class="hero__title">
-								The experience and professionalism of our specialists will help solve a variety of
+								The experience and professional of our specialists will help solve a variety of
 								problems with your pets. We offer a wide range of veterinary services
 							</div>
 							<div class="hero__buttons">
@@ -37,11 +102,41 @@
 					</div>
 
 
+
 				</div>
 			</section>
 
 
-			<section class="about">
+			<section class="about">				
+				<div class="about__menu">
+					<ul class="about__list">
+						<li class="about__link" >
+						  <a href="#"><i class="fa fa-facebook">
+							<img src="img2/ic-09.webp" class="about__icon" alt=""></img>
+						  </i></a>
+						</li>
+						<li class="about__link" >
+						  <a href="#"><i class="fa fa-twitter">
+							<img src="img2/ic-02.webp" class="about__icon" alt=""></img>
+						  </i></a>
+						</li>
+						<li class="about__link" >
+						  <a href="#"><i class="fa fa-linkedin">
+							<img src="img2/ic-05.webp" class="about__icon" alt=""></img>
+						  </i></a>
+						</li>
+						<li class="about__link" >
+						  <a href="#"><i class="fa fa-instagram">
+							<img src="img2/ic-03.webp" class="about__icon" alt=""></img>
+						  </i></a>
+						</li>
+						<li class="about__link" >
+						  <a href="#"><i class="fa fa-google">
+							<img src="img2/ic-08.webp" class="about__icon" alt=""></img>
+						  </i></a>
+						</li>
+				  </ul>
+				</div>
 				<div class="about__container">
 					<div class="about__img">
 						<img src="img2/about.webp" alt="dogs">

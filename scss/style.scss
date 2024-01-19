@@ -11,6 +11,9 @@
 
 
 // Компоненти, сторінки
+@import "header.css";
+
+// Компоненти, сторінки
 @import "_common.scss";
 
 // Компоненти, сторінки
@@ -50,18 +53,17 @@
 //SCSS основні стилі 
 
 .hero {
-		background: url(../img2/22.webp), url(../img2/hero.webp);
-		background-repeat: no-repeat;
-		background-position:  top left, 0 0;
-		background-size: toRem(200), cover;
+		background: linear-gradient(45deg, rgba(255, 197, 8, 0.5), rgba(251, 255, 24, 0.9)), 
+		 url(../img2/лапы.webp) no-repeat, url(../img2/klipartz01.png) center right no-repeat;
+		background-size: auto auto, contain;
 
 		padding: toRem(150) toRem(0);
 
 		@media(max-width: toEm(992)) {
-			padding: toRem(100) toRem(0);
+			padding: toRem(60) toRem(0);
 		}
 		@media(max-width: toEm(670)) {
-			padding: toRem(80) toRem(0);
+			padding: toRem(40) toRem(0);
 		}
 		@media(max-width: toEm(605)) {
 			padding: toRem(30) toRem(0) toRem(10);
@@ -94,6 +96,7 @@
 	}
 		& h1 {
 		font-size: toRem(52);
+		text-shadow: toRem(1) toRem(2) toRem(5) #000;
 		color: #ffffff;
 		margin-bottom: toEm(45, 52);
 		font-family: 'CoreSansC-75ExtraBold';
@@ -113,7 +116,7 @@
 			padding: toRem(10);
 			border-radius: toRem(20);
 		}
-		@media(max-width: toEm(345)) {
+		@media(max-width: toEm(365)) {
 			font-size: toRem(30);
 			max-width: toRem(250);
 			margin-bottom: toEm(10);
@@ -124,12 +127,7 @@
 //---------анімація--------
 		}
 		& span {
-			color: #023b48;
-			text-shadow: none;
-			@media(max-width: toEm(605)) {
-				color: #1da5c3;
-				text-shadow: toRem(1) toRem(2) toRem(5) #000;
-			}
+			color: #fd6c11;
 		}
 
 	// .hero__title
@@ -139,13 +137,14 @@
 			color: #ffffff;
 			font-family: 'CoreSansC-55Medium';
 			font-weight: 500;
+			text-shadow: toRem(1) toRem(2) toRem(5) #000;
 			line-height: 130%;
 			@media(max-width: toEm(415)) {
 				font-size: toRem(16);
 				margin-bottom: toEm(25);
 			}
 			@media(max-width: toEm(320)) {
-				text-align: center;
+				text-align: left;
 			}
 
 		//---------анімація--------
@@ -165,13 +164,14 @@
 
 	// .hero__button
 	&__button {
-		background-color: #023b48;
+		background-color: #fd6c11;
 		padding: toRem(10) toRem(45);
 		font-size: toRem(18);
 		text-align: center;
 		color: #fff;
 		line-height: 130%;
 		display: inline-block;
+		box-shadow: toRem(1) toRem(2) toRem(5) #000;
 		border: toRem(1) solid transparent;
 		transition: 0.5s;
 		&:hover {
@@ -213,7 +213,7 @@
 	margin-top: -50%;
 	}
 	@media(max-width: toEm(380)) {
-		margin-top: toRem(-50);
+		margin-top: toRem(-30);
 	}
 //---------анімація--------
 	  animation: text-focus-in 1s 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -228,20 +228,96 @@
 }
 
 
+
 //--------------------about-------------------------
+
+//-------menu----------------
 .about {
-	padding: toRem(120) toRem(0);
+	& > *:last-child {
+		margin-bottom: toEm(0);
+	}
+
+//---ставим по центру блок---
+ul {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: toRem(5);
+	max-width: 950;
+	padding: toRem(20);
+	display: flex;
+	justify-content: center;
+	margin-bottom: toEm(20);
+	@media(max-width: toEm(640)) {
+	  display: none;
+	}
+
+    li {
+        a {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            display: block;
+            text-align: center;
+            margin: 0 10px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            text-decoration: none;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+            transition: 0.5s;
+            padding: 8px;
+            background: linear-gradient(0deg, #ddd, #fff);
+
+            &:hover {
+                box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            }
+
+            .fa {
+                width: 100%;
+                height: 100%;
+                display: block;
+                background: linear-gradient(0deg, #fff, #ddd);
+
+                border-radius: 50%;
+                line-height: calc(80px - 16px);
+                font-size: 24px;
+                color: #262626;
+                transition: 0.5s;
+            }
+        }
+
+        &:nth-child(1) .fa:hover {
+            color: #1877f2;
+        }
+        &:nth-child(2) .fa:hover {
+            color: #1da1f2;
+        }
+        &:nth-child(3) .fa:hover {
+            color: #007bb5;
+        }
+        &:nth-child(4) .fa:hover {
+            color: #f46f30;
+        }
+        &:nth-child(5) .fa:hover {
+            color:  #db4437;
+        }
+        &:nth-child(6) .fa:hover {
+            color: #25d366;
+        }
+    }
+}
+}
+//-------menu----------------
+
+.about {
+	padding: toRem(10) toRem(0);
+	@media(max-width: toEm(992)) {
+		padding: toRem(30) toRem(0);
+	}
 	background-image: url(../img2/about-bg.webp);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	width: 100%;
-	@media(max-width: toEm(767)) {
-		padding: toRem(100) toRem(0);
-	}
-	@media(max-width: toEm(700)) {
-		padding: toRem(40) toRem(0);
-	}
 	@media(max-width: toEm(605)) {
 		padding: toRem(20) toRem(0) toRem(20);
 	}
@@ -312,7 +388,7 @@
 		justify-content: flex-start;
 		font-family: 'CoreSansC-55Medium';
 		font-weight: 500;
-		background-color: #023b48;
+		background-color: #fd6c11;
 		padding: toRem(10) toRem(20);
 		font-size: toRem(18);
 		text-align: center;
@@ -330,6 +406,14 @@
 		  width: 100%;
 		  font-size: toRem(16);
 		}
+	}
+
+	& li a i img{
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 50 / 50;
+		object-fit: contain;
+		border-radius: 50%;
 	}
 }
 
@@ -402,7 +486,7 @@
 	// .services__img
 	&__img {
 		max-width: toRem(110);
-		background-color: #06cdfa;
+		background-color: #fd6c11;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -610,7 +694,7 @@
 	// .slider__item
 	&__item { // slider 1, 2 ,3...
 		padding: toRem(20);
-		border: toRem(1) double #0ddcf8;
+		border: toRem(1) double #fd6c11;
 		background-color: #6ee4f418;
 		& > *:last-child {
 			margin-bottom: toEm(0);
@@ -689,13 +773,14 @@
     width: toRem(5); 		//размеры slick-dots button
     height: toRem(5);		//размеры slick-dots button
 	padding: toRem(10);		//размеры slick-dots button
-    background-color: rgb(14, 223, 250);
+    background-color: #fd6c11;
     border-radius: 50%; 
     cursor: pointer;
+	border: toRem(3)solid transparent;
 }
 .slider .slick-dots li.slick-active button { 
     background-color: transparent;
-    border: toRem(2)solid rgb(14, 223, 250);
+    border: toRem(3)solid #fd6c11;
 }
 
 .slider {
@@ -739,7 +824,7 @@
 
 //----------для img слайдера -  border--------------------
 .slider__item img{
-    border: toRem(1) double #0d34f8;
+    border: toRem(1) double #fd6c11;
     max-width: 100%;
     cursor: pointer;
 }
