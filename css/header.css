@@ -1,7 +1,9 @@
 
 /* ---header---- */
 .header {
-	position: relative;
+	position: fixed;
+	width: 100%;
+	
 	z-index: 50;
 	background-color: #fd6c11;
 }
@@ -184,43 +186,8 @@
 
 
 
-/* -----------------icons--------------- */
-.header__button{
-	flex-shrink: 0;/* щоб button не переносилася на другий рядок при зменшенні екрану */
-}
-
-.button__header {
-	position: relative;/* дістаємо наверх для адаптиву */
-	z-index: 5;/* дістаємо наверх для адаптиву */
-}
-
-.button__header__item {
-	padding: 8px 30px;
-	background: #FFF;
-	color: #fd6c11;
-	font-family: 'CoreSansC-55Medium';
-	font-size: 20px;
-	font-weight: 700;
-	line-height: 100%;
-	border: 1px solid transparent;
-	transition: transform 0.3s;
-}
-@media (max-width:960px){
-	.button__header__item {
-		padding: 9px 29px 11px 26px;
-	}
-}
-
-
-
 @media (any-hover: hover) {
 
-	/* прибираємо -hover- на тач-скрінах */
-	.button__header__item:hover {
-		background-color: #fff;
-		color: #0E333D;
-		border: 1px solid #0E333D;
-	}
 }
 
 
@@ -252,8 +219,11 @@
 		transition: top 0.3s;
 		/* буде виїзджати ЗВЕРХУ */
 		z-index: 3px;
-		background-color: rgb(89, 54, 107);
+		/*background-color: rgb(240, 252, 15);*/
 		padding: 80px 15px 30px 15px;
+		background: linear-gradient(45deg, rgba(255, 197, 8, 0.9), rgba(251, 255, 24, 0.9)), 
+		url(../img2/klipartz01.png) center right no-repeat;
+		background-size: cover;
 
 
 
@@ -269,7 +239,7 @@
 		top: 100%;
 		right: 0;			/* буде виїзджати ЗВЕРХУ */
 		transition: top 0.3s;/* буде виїзджати ЗВЕРХУ */
-		background-color: #a583fc;
+		background-color: #ff6b15;
 	}
 
 	.menu-open .menu__body,
@@ -408,11 +378,5 @@
 	.header__logo {
 		font-size: 24px;
 		/* зменшуємо logo text */
-	}
-
-	.button__header__item {
-		gap: 5px;
-		padding: 5px 24px 7px 21px;
-		font-size: 16px;
 	}
 }
