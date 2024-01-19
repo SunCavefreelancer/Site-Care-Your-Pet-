@@ -331,14 +331,22 @@ span {
   background: linear-gradient(45deg, rgba(255, 197, 8, 0.5), rgba(251, 255, 24, 0.9)), url(../img2/лапы.webp) no-repeat, url(../img2/klipartz01.png) center right no-repeat;
   background-size: auto auto, contain;
   height: 100svh;
-  padding: 9.375rem 0rem;
+  padding: 9.375rem 0rem 4.375rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 @media (max-width: 62em) {
   .hero {
-    padding: 3.75rem 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media (max-width: 47.9375em) {
@@ -547,7 +555,7 @@ span {
 }
 @media (max-width: 47.9375em) {
   .hero img {
-    aspect-ratio: 70/20;
+    aspect-ratio: 50/20;
   }
 }
 
