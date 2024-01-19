@@ -24,7 +24,9 @@
 @import "_form.scss";
 
 
-/* body {} */
+body {
+	background-color: $colorBody;
+}
 
 
 
@@ -225,92 +227,31 @@
 		aspect-ratio: 100 / 80;
 		object-fit: contain;
 		@media(max-width: toEm(992)) {
-			aspect-ratio: 70 / 40;
+			aspect-ratio: 100 / 40;
+			margin-top: toRem(-200);
 		}
-
+		@media(max-width: toEm(950)) {
+			aspect-ratio: 100 / 40;
+			margin-top: toRem(-100);
+		}
+		@media(max-width: toEm(820)) {
+			margin-top: toRem(-80);
+		}
+		@media(max-width: toEm(767)) {
+			margin-top: toRem(-20);
+		}
+		@media(max-width: toEm(767)) {
+			margin-top: toRem(0);
+		}
+		@media(max-width: toEm(320)) {
+			aspect-ratio: 80 / 40;
+		}
 	}
 }
 
 
 
 //--------------------about-------------------------
-
-//-------menu----------------
-.about {
-	& > *:last-child {
-		margin-bottom: toEm(0);
-	}
-
-//---ставим по центру блок---
-ul {
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	gap: toRem(5);
-	max-width: 950;
-	padding: toRem(20);
-	display: flex;
-	justify-content: center;
-	margin-bottom: toEm(20);
-	@media(max-width: toEm(640)) {
-	  display: none;
-	}
-
-    li {
-        a {
-            position: relative;
-            width: 80px;
-            height: 80px;
-            display: block;
-            text-align: center;
-            margin: 0 10px;
-            border-radius: 50%;
-            box-sizing: border-box;
-            text-decoration: none;
-            box-shadow: 0 10px 15px rgba(0,0,0,0.3);
-            transition: 0.5s;
-            padding: 8px;
-            background: linear-gradient(0deg, #ddd, #fff);
-
-            &:hover {
-                box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-            }
-
-            .fa {
-                width: 100%;
-                height: 100%;
-                display: block;
-                background: linear-gradient(0deg, #fff, #ddd);
-
-                border-radius: 50%;
-                line-height: calc(80px - 16px);
-                font-size: 24px;
-                color: #262626;
-                transition: 0.5s;
-            }
-        }
-
-        &:nth-child(1) .fa:hover {
-            color: #1877f2;
-        }
-        &:nth-child(2) .fa:hover {
-            color: #1da1f2;
-        }
-        &:nth-child(3) .fa:hover {
-            color: #007bb5;
-        }
-        &:nth-child(4) .fa:hover {
-            color: #f46f30;
-        }
-        &:nth-child(5) .fa:hover {
-            color:  #db4437;
-        }
-        &:nth-child(6) .fa:hover {
-            color: #25d366;
-        }
-    }
-}
-}
-//-------menu----------------
 
 .about {
 	padding: toRem(10) toRem(0);
@@ -428,10 +369,10 @@ ul {
 	@media(max-width: toEm(767)) {
 		padding: toRem(30) toRem(0);
 	}
-	background-image: url(../img2/bck.webp);
+	background-image: url(../img2/klipartz.com.webp);
 	background-repeat: no-repeat;
-	background-position: right center;
-	background-size: contain;
+	background-position: top right;
+	background-size: toRem(750);
 	width: 100%;
 	height: 100%;
 
