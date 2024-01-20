@@ -28,3 +28,32 @@ $('.slider').slick({
   });
 
 /* =====================================sliderFON=============================================== */
+
+
+
+/*---class = .main__upbutton-----------кнопка-------------javascript---------------------*/
+let options = {
+	root: null,
+	rootMargin: "0px 0px 0px 0px",
+	//% от размера обьекта
+	//при появлении которого срабатывает действие
+	threshold: 0.3,
+};
+let callback = (entries, observer) => {
+	entries.forEach((entry) => {
+		const targetElement = entry.target;
+		if (entry.isIntersecting) {
+			targetElement.classList.add("show");
+			console.log('я тебя вижу');
+		} else {
+			//targetElement/classList.remove('show');
+			console.log('я тебя не вижу');
+		}
+	});
+}
+
+let observer = new IntersectionObserver(callback, options);
+
+//если 1 обьект
+let target = document.querySelector(".main__upbutton");
+observer.observe(target);

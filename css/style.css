@@ -306,6 +306,52 @@ body {
   background-color: rgba(255, 228, 24, 0.9);
 }
 
+.main {
+  position: relative;
+}
+.main__upbutton {
+  position: absolute;
+  z-index: 50;
+  bottom: 12.5rem;
+  right: 3.125rem;
+  display: inline-block;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #ff3b0a;
+  padding: 1.25rem 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  border-radius: 25%;
+  gap: 0.9375rem;
+  -webkit-transform: translate(0rem, 12.5rem);
+      -ms-transform: translate(0rem, 12.5rem);
+          transform: translate(0rem, 12.5rem);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+.main__upbutton.show {
+  -webkit-transform: translate(0rem, 0rem);
+      -ms-transform: translate(0rem, 0rem);
+          transform: translate(0rem, 0rem);
+  opacity: 1;
+  visibility: visible;
+}
+.main__upbutton__upbutton img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 40/50;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
 .wrapper {
   overflow: clip;
   min-height: 100%;

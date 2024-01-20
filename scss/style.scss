@@ -28,7 +28,47 @@ body {
 	background-color: $colorBody;
 }
 
+.main {
+	position: relative;
+	
+		//main__upbutton------------------------javascript---------------------
+		&__upbutton {
+			position: absolute;
+			z-index: 50;
+			bottom: toRem(200);
+			right: toRem(50);
+			display: inline-block;
+			font-size: toRem(16);
+			color: #ffffff;
+			background-color: #ff3b0a;
+			padding: toRem(20) toRem(10);
+			display: flex;
+			flex-direction: column-reverse;
+			border-radius: 25%;
+			
+			gap: toRem(15);
 
+
+
+			transform: translate(toRem(0), toRem(200));		//-----на какое растояние кнопка поднимится---
+			opacity: 0;
+			visibility: hidden;
+			transition: 2s;									//-------время появления кнопки--------
+			&.show {
+				transform: translate(toRem(0), toRem(0));
+				opacity: 1;
+				visibility: visible;
+			}
+			&__upbutton img {
+				width: 100%;
+				height: 100%;
+				aspect-ratio: 40 / 50;
+				object-fit: cover;
+				border-radius: 50%;
+			}
+		}
+		//main__upbutton------------------------javascript---------------------
+}
 
 .wrapper {
 	overflow: clip;
